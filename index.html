@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <title>ARRAY METHODS</title>
+</head>
+<body>
+    
+    <div class="selectCategory">
+        <select name="selectCategory">
+            <option value="string">String</option>
+            <option value="array">Array</option>
+        </select>
+        <button onclick=display()>See</button>
+    </div>
+    <section class="category categoryArray" data-cat="array">
+        <div class="subcategory booleans">
+            <h3>Returns a Boolean</h3>
+            <ol>
+                <li>
+                    <h5>every()</h5>
+                    <p>array.every(function(currentValue, index, arr), thisValue)</p>
+                </li>
+                <li>
+                    <h5>includes()</h5>
+                    <p>array.includes(element, start)</p>
+                </li>
+                <li>
+                    <h5>Array.isArray()</h5>
+                    <p>Array.isArray(object)</p>
+                </li>
+                <li>
+                    <h5>some()</h5>
+                    <p>array.some(function(currentValue, index, arr), thisValue)</p>
+                </li>
+            </ol>
+        </div>
+        <div class="subcategory modifies">
+            <h3>Modifies Original Array</h3>
+            <ol>
+                <li>
+                    <h5>copyWithin()</h5>
+                    <p>array.copyWithin(target, start, end)</p>
+                    <p>RETURN: An Array, the changed array</p>
+                </li>
+                <li>
+                    <h5>fill()</h5>
+                    <p>array.fill(value, start, end)</p>
+                    <p>RETURN: An Array, the changed array</p>
+                </li>
+                <li>
+                    <h5>map()</h5>
+                    <p>array.map(function(currentValue, index, arr), thisValue)</p>
+                    <p>RETURNS: An Array containing the results of calling the provided function for each element in the original array.</p>
+                </li>
+                
+                <li>
+                    <h5>reverse()</h5>
+                    <p>array.reverse()</p>
+                    <p>RETURNS: An Array, representing the array after it has been reversed</p>
+                </li>
+                <li>
+                    <h5>sort()</h5>
+                    <p>array.sort(compareFunction)</br>DEFAULT: --function(a, b){return a-b}--</p>
+                    <p>RETURNS: The Array object, with the items sorted</p>
+                </li>
+                <li>
+                    <h5>splice()</h5>
+                    <p>array.splice(index, howmany, item1, ....., itemX)</p>
+                    <p>RETURNS: A new Array, containing the removed items (if any)</p>
+                </li>
+                <li>
+                    <h5>pop()</h5>
+                    <p>array.pop()</p>
+                    <p>RETURNS: Any type*, representing the removed array item.</p>
+                </li>
+                <li>
+                    <h5>push()</h5>
+                    <p>array.push(item1, item2, ..., itemX)</p>
+                    <p>RETURNS: A Number, representing the new length of the array</p>
+                </li>
+                <li>
+                    <h5>shift()</h5>
+                    <p>array.shift()</p>
+                    <p>RETURNS: Any type*, representing the removed array item.</p>
+                </li>
+                <li>
+                    <h5>unshift()</h5>
+                    <p>array.unshift(item1, item2, ..., itemX)</p>
+                    <p>RETURNS: A Number, representing the new length of the array</p>
+                </li>
+            </ol>
+        </div>
+        <div class="subcategory wontModify">
+            <h3>Wont modify original array</h3>
+            <ol>
+                <li>
+                    <h5>concat()</h5>
+                    <p>array1.concat(array2, array3, ..., arrayX)</p>
+                    <p>RETURN: An Array object, representing the joined array</p>
+                </li>
+                <li>
+                    <h5>constructor</h5>
+                    <p>array.constructor</p>
+                    <p>RETURN: function Array() { [native code] }</p>
+                </li>
+                <li>
+                    <h5>entries()</h5>
+                    <p>array.entries()</p>
+                    <p>RETURN: An Array Iterator object</p>
+                </li>
+                <li>
+                    <h5>filter()</h5>
+                    <p>array.filter(function(currentValue, index, arr), thisValue)</p>
+                    <p>RETURN: An Array containing all the array elements that pass the test. If no elements pass the test it returns an empty array.</p>
+                </li>
+                <li>
+                    <h5>find()</h5>
+                    <p>array.find(function(currentValue, index, arr),thisValue)</p>
+                    <p>RETURN: Returns the array element value if any of the elements in the array pass the test, otherwise it returns undefined</p>
+                </li>
+                <li>
+                    <h5>findIndex()</h5>
+                    <p>array.findIndex(function(currentValue, index, arr), thisValue)</p>
+                    <p>RETURN: Returns the array element index if any of the elements in the array pass the test, otherwise it returns -1</p>
+                </li>
+                <li>
+                    <h5>Array.from()</h5>
+                    <p>Array.from(object, mapFunction, thisValue)</p>
+                    <p>RETURNS: An Array object</p>
+                </li>
+                <li>
+                    <h5>indexOf()</h5>
+                    <p>array.indexOf(item, start)</p>
+                    <p>RETURNS: A Number, representing the position of the specified item, otherwise -1</p>
+                </li>
+                <li>
+                    <h5>join()</h5>
+                    <p>array.join(separator)</p>
+                    <p>RETURNS: A String, representing the array values, separated by the specified separator</p>
+                </li>
+                <li>
+                    <h5>keys()</h5>
+                    <p>array.keys()</p>
+                    <p>RETURNS: An Array Iterator object</p>
+                </li>
+                <li>
+                    <h5>length</h5>
+                    <p>array.length = number || array.length</p>
+                    <p>RETURNS: A Number, representing the number of elements in the array object</p>
+                </li>
+                <li>
+                    <h5>lastIndexOf()</h5>
+                    <p>array.lastIndexOf(item, start)</p>
+                    <p>RETURNS: A Number, representing the position of the specified item, otherwise -1</p>
+                </li>
+                <li>
+                    <h5>prototype</h5>
+                    <p>Array.prototype.name = value</p>
+                </li>
+                <li>
+                    <h5>reduce()</h5>
+                    <p>array.reduce(function(total, currentValue, currentIndex, arr), initialValue)</p>
+                    <p>RETURNS: Returns the accumulated result from the last call of the callback function</p>
+                </li>
+                <li>
+                    <h5>reduceRight()</h5>
+                    <p>array.reduceRight(function(total, currentValue, currentIndex, arr), initialValue)</p>
+                    <p>RETURNS:	Returns the accumulated result from the last call of the callback function</p>
+                </li>
+                <li>
+                    <h5>slice()</h5>
+                    <p>array.slice(start, end)</p>
+                    <p>RETURNS: A new Array, containing the selected elements</p>
+                </li>
+                <li>
+                    <h5>toString()</h5>
+                    <p>array.toString()</p>
+                    <p>RETURNS: A String, representing the values of the array, separated by a comma</p>
+                </li>
+                <li>
+                    <h5>valueOf()</h5>
+                    <p>array.valueOf()</p>
+                    <p>RETURNS: An Array. The valueOf() method returns itself</p>
+                </li>
+                
+
+            </ol>
+        </div>
+        <div class="subcategory other">
+            <h3>Could modify || Other</h3>
+            <ol>
+                <li>
+                    <h5>forEach()</h5>
+                    <p>array.forEach(function(currentValue, index, arr), thisValue)</p>
+                    <p>RETURNS: undefinded, depend on the function</p>
+                </li>
+                <li>
+                    <h5>length</h5>
+                    <p>array.length = number || array.length</p>
+                    <p>RETURNS: A Number, representing the number of elements in the array object</p>
+                </li>
+            </ol>
+
+        </div>
+    </section>
+
+    <section class="category categoryString" data-cat="string">
+        <div class="subcategory booleans">
+            <h3>Returns a Boolean</h3>
+            <ol>
+                <li>
+                    <h5>endsWith()</h5>
+                    <p>string.endsWith(searchvalue, length)</p>
+                </li>
+                <li>
+                    <h5>includes()</h5>
+                    <p>string.includes(searchvalue, start)</p>
+                </li>
+                <li>
+                    <h5>startsWith()</h5>
+                    <p>string.startsWith(searchvalue, start)</p>
+                </li>
+            </ol>
+        </div>
+        <div class="subcategory modifies">
+            <h3>Modifies original String</h3>
+            <ol>
+                <li>
+                    <h5></h5>
+                    <p></p>
+                </li>
+                
+            </ol>
+        </div>
+        <div class="subcategory wontModify">
+            <h3>Wont modify the original String</h3>
+            <ol>
+                <li>
+                    <h5>charAt()</h5>
+                    <p>string.charAt(index)</p>
+                    <p>RETURNS: A String, representing the character at the specified index, or an empty string if the index number is not found</p>
+                </li>
+                <li>
+                    <h5>charCodeAt()</h5>
+                    <p>string.charCodeAt(index)</p>
+                    <p>RETURNS: A Number, representing the unicode of the character at the specified index.</p>
+                </li>
+                <li>
+                    <h5>concat()</h5>
+                    <p>string.concat(string1, string2, ..., stringX)</p>
+                    <p>RETURNS: A new String, containing the text of the combined strings</p>
+                </li>
+                <li>
+                    <h5>indexOf()</h5>
+                    <p>string.indexOf(searchvalue, start)</p>
+                    <p>RETURNS: A Number, representing the position where the specified searchvalue occurs for the first time, or -1 if it never occurs</p>
+                </li>
+                <li>
+                    <h5>lastIndexOf()</h5>
+                    <p>string.lastIndexOf(searchvalue, start)</p>
+                    <p>RETURNS: A Number, representing the position where the specified searchvalue occurs for the last time, or -1 if it never occurs</p>
+                </li>
+                <li>
+                    <h5>length</h5>
+                    <p>string.length</p>
+                    <p>RETURNS: The length of a string</p>
+                </li>
+                <li>
+                    <h5>localeCompare()</h5>
+                    <p>string.localeCompare(compareString)</p>
+                    <p>RETURNS: A Number,</br>
+                        -1 if the reference string is sorted before the compareString</br>
+                        0 if the two strings are equal </br>
+                        1 if the reference string is sorted after the compareString</p>
+                </li>
+                <li>
+                    <h5>match()</h5>
+                    <p>string.match(regexp)</p>
+                    <p>RETURNS: An Array, containing the matches, one item for each match, or null if no match is found</p>
+                </li>
+                <li>
+                    <h5>repeat()</h5>
+                    <p>string.repeat(count)</p>
+                    <p>RETURNS: A String, a new string containing copies of the original string</p>
+                </li>
+                <li>
+                    <h5>replace()</h5>
+                    <p>string.replace(searchvalue, newvalue)</p>
+                    <p>RETURN: A new String, where the specified value(s) has been replaced by the new value</p>
+                </li>
+                <li>
+                    <h5>slice()</h5>
+                    <p>string.slice(start, end)</p>
+                    <p>RETURNS: A String, representing the extracted part of the string</p>
+                </li>
+                <li>
+                    <h5>search()</h5>
+                    <p>string.search(searchvalue)</p>
+                    <p>RETURNS: A Number, representing the position of the first occurrence of the specified searchvalue, or -1 if no match is found</p>
+                </li>
+                <li>
+                    <h5>split()</h5>
+                    <p>string.split(separator, limit)</p>
+                    <p>RETURNS: An Array, containing the splitted values</p>
+                </li>
+                <li>
+                    <h5>substring()</h5>
+                    <p>string.substring(start, end)</p>
+                    <p>RETURNS: A new String containing the extracted characters</p>
+                </li>
+                <li>
+                    <h5>substr()</h5>
+                    <p>string.substr(start, length)</p>
+                    <p>RETURNS: A new String, containing the extracted part of the text. If length is 0 or negative, an empty string is returned</p>
+                </li>
+                <li>
+                    <h5>toLocaleLowerCase()</h5>
+                    <p>string.toLocaleLowerCase()</p>
+                    <p>RETURNS: A String, representing the value of a string converted to lowercase according to the host's current locale</p>
+                </li>
+                <li>
+                    <h5>toLocaleUpperCase()</h5>
+                    <p>string.toLocaleUpperCase()</p>
+                    <p>RETURNS: A String, representing the value of a string converted to uppercase according to the host's current locale</p>
+                </li>
+                <li>
+                    <h5>toLowerCase()</h5>
+                    <p>string.toLowerCase()</p>
+                    <p>RETURNS: A String, representing the value of a string converted to lowercase</p>
+                </li>
+                <li>
+                    <h5>toString()</h5>
+                    <p>string.toString()</p>
+                    <p>RETURNS: A String, representing the value of a string</p>
+                </li>
+                <li>
+                    <h5>toUpperCase()</h5>
+                    <p>string.toUpperCase()</p>
+                    <p>RETURNS: A String, representing the value of a string converted to uppercase</p>
+                </li>
+                <li>
+                    <h5>trim()</h5>
+                    <p>string.trim()</p>
+                    <p>RETURNS: A String, representing the string with removed whitespace from both ends</p>
+                </li>
+                <li>
+                    <h5>valueof()</h5>
+                    <p>string.valueOf()</p>
+                    <p>RETURNS: A String, representing the primitive value of a string</p>
+                </li>
+            </ol>
+        </div>
+        <div class="subcategory other">
+            <h3>Other</h3>
+            <ol>
+                <li>
+                    <h5>constructor</h5>
+                    <p>string.constructor</p>
+                    <p>RETURNS: function String() { [native code] }</p>
+                </li>
+                <li>
+                    <h5>String.fromCharCode().</h5>
+                    <p>String.fromCharCode(n1, n2, ..., nX)</p>
+                    <p>RETURNS: A String, representing the character(s) representing the specified unicode number(s)</p>
+                </li>
+                <li>
+                    <h5>prototype</h5>
+                    <p>object.prototype.name = value</p>
+                    <p>RETURNS: A reference to the String.prototype object</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+
+    <script src="index.js"></script>
+
+</body>
+</html>
